@@ -1,0 +1,170 @@
+﻿.RegularFontStyle {
+    font-family: FalloutFont;
+    font-size: 20px;
+    font-weight: lighter;
+    color: white;
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+.Headline {
+    font-family: FalloutFont;
+    font-weight: lighter;
+    color: white;
+}
+
+.BodyStyle {
+    background-image: url(../Backgrounds/BackgroundImage.jpeg);
+    background-size: 100%;
+    background-attachment: fixed;
+}
+
+header{
+    margin: 0 auto;
+    padding-top:50px;
+    padding-bottom:0;
+}
+
+.HeaderDiv {
+    position: fixed;
+    top: 0;
+    background: #1d1d1d;
+    width: 100%;
+}
+
+.Container {
+    margin: 0 auto;
+    padding-bottom: 15px;
+}
+
+.DivRow {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.MainDiv {
+    margin: 0 auto;
+    text-align: center;
+    height: 100%;
+    max-width: 90em;
+    min-width: 40em;
+    background: rgba(29, 29, 29, .9);
+}
+
+nav ul {
+    display: inline-flex;
+    list-style: none;
+    margin: 0 auto;
+}
+
+nav li {
+    list-style: none;
+    margin-right: 5px;
+}
+
+nav a {
+    display: inline;
+    text-decoration: none;
+    font-family: FalloutFont;
+    font-weight: lighter;
+    padding: 5px;
+    border: 3px solid white;
+    border-radius: 5px;
+    color: white;
+}
+
+.nav-input {
+    position: absolute;
+    left: 260px;
+    top: 13px;
+    font-family: FalloutFont;
+    font-weight: lighter;
+    width: 70px;
+    height: 33.3px;
+    font-size: 17px;
+    text-align: center;
+    padding: 5px;
+    border: 3px solid white;
+    border-radius: 5px;
+    color: white;
+}
+
+.links {
+    text-decoration: none;
+    font-family: FalloutFont;
+    font-weight: lighter;
+    padding: 5px;
+    border: 3px solid white;
+    border-radius: 5px;
+    color: white;
+}
+
+.PersTable {
+    display: inline-block;
+    border-collapse: collapse;
+    border: 1px solid white;
+    min-width: 40em;
+}
+
+.form-div {
+    margin-top: 10px;
+}
+
+td {
+    font-family: FalloutFont;
+    font-weight: lighter;
+    padding: 15px;
+    border: 1px solid white;
+    color: white;
+}
+
+.image {
+    max-height: 300px;
+    max-width: 200px;
+}
+
+.textarea {
+    font-family: FalloutFont-slim;
+    font-size: 15px;
+    background: rgba(29, 29, 29, .9);
+    color: white;
+    border: 3px solid white;
+    border-radius: 5px;
+    max-height: 200px;
+    min-height: 100px;
+    min-width: 70%;
+    max-width: 90%;
+}
+
+input {
+    height: 20px;
+    width: 250px;
+    font-family: FalloutFont;
+    background: rgba(29, 29, 29, .9);
+    color: white;
+    border: 3px solid white;
+    border-radius: 5px;
+}
+
+.button {
+    height: 30px;
+    width: 100px;
+    font-family: FalloutFont;
+    font-size: 18px;
+    background: rgba(29, 29, 29, .9);
+    color: white;
+    border: 3px solid white;
+    border-radius: 5px;
+}
+
+
+@font-face {
+    font-family: FalloutFont;
+    src: url(../Fonts/FalloutFont.ttf);
+}
+
+@font-face {
+    font-family: FalloutFont-slim;
+    src: url(../Fonts/FalloutFont.ttf);
+    font-weight: 100;
+}

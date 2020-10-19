@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<body>
+    @if (User.Identity.IsAuthenticated)
+    {
+        <div class="HeaderDiv">
+            <nav>
+                <ul>
+                    <li><h4><a href='/Index/Index'>Главная</a></h4></li>
+                    <li><h4><a href='/Plot/Plot'>Сюжет</a></h4></li>
+                    <li><h4><a href='/Pers/Pers'>Персонажи</a></h4></li>
+                </ul>
+                <form method="post" asp-controller="Login" asp-action="Logout" id="logoutform" asp-antiforgery="true">
+                    <input class="nav-input" type="submit" value="Выход" />
+                </form>
+            </nav>
+        </div>
+    }
+    else
+    {
+        <div class="HeaderDiv">
+            <nav>
+                <ul>
+                    <li><h4><a href='/Index/Index'>Главная</a></h4></li>
+                    <li><h4><a href='/Plot/Plot'>Сюжет</a></h4></li>
+                    <li><h4><a href='/Login/Login'>Вход</a></h4></li>
+                    <li><h4><a href='/Login/Register'>Регистрация</a></h4></li>
+                </ul>
+            </nav>
+        </div>
+    }
+    <div>
+        @RenderBody();
+    </div>
+</body>
+</html>

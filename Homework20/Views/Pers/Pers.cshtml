@@ -1,0 +1,58 @@
+﻿@using PersLib.Model
+@{ Layout = "MenuLayout"; }
+@{ }
+<!DOCTYPE html>
+<html lang="ru-RU">
+<head>
+    <meta charset="utf-8">
+    <title>Краткая история игры Fallout. Персонажи</title>
+    <link href="~/css/Style.css" rel="stylesheet" />
+</head>
+<body class="BodyStyle">
+    <header>
+        <div class="DivRow">
+            <h1 class="Headline">Основные персонажи Fallout: A Post Nuclear Role Playing Game</h1>
+        </div>
+    </header>
+    <div class="MainDiv">
+        <main>
+            <form class="RegularFontStyle" asp-action="Pers" method="get" enctype="multipart/form-data">
+                <input type="text" name="search" placeholder="Имя персонажа" />
+                <input class="button" type="submit" value="Поиск" />
+            </form>
+            <table class="PersTable">
+                @if (Model != null)
+                {
+                    @foreach (Pers t in Model)
+                    {
+                        <tr>
+                            <td><img class="image" src="@t.Image" alt="@t.Name" /></td>
+                            <td>@t.Name</td>
+                            <td>@t.Bio</td>
+                        </tr>
+                    }
+                }
+                else
+                {
+                    <tr>
+                        <td>Не найден</td>
+                    </tr>
+                }
+            </table>
+        </main>
+        <div class="form-div">
+            <form class="RegularFontStyle" action="~/Pers/AddPers" method="post" enctype="multipart/form-data">
+                <span>Имя</span>
+                <input type="text" name="name" placeholder="Имя пперсонажа" required />
+                <span>Изображение</span>
+                <input class="input" type="file" accept="image/*" name="uploadImage" required />
+                <p>
+                    Описание
+                </p>
+                <textarea class="textarea" name="bio" placeholder="Описание персонажа" required></textarea><br />
+                <input class="button" type="submit" value="Отправить" />
+            </form>
+        </div>
+    </div>
+</body>
+</html>

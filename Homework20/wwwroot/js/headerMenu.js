@@ -1,0 +1,1 @@
+﻿document.write("<nav><ul><li><h4><a href='/Index/Index'>Главная</a></h4></li><li><h4><a href='/Plot/Plot'>Сюжет</a></h4></li><li><h4><a href='/Pers/Pers'>Персонажи</a></h4></li></ul></nav>")

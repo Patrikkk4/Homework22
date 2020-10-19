@@ -1,0 +1,32 @@
+﻿@model Homework20.AuthModel.LoginModel
+@{ Layout = "MenuLayout"; }
+<!Doctype html>
+<html>
+<head>
+    <title>Страница входа</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="~/css/Style.css" rel="stylesheet" />
+</head>
+<body class="BodyStyle">
+    <header>
+        <div class="DivRow">
+            <h1 class="Headline">Вход на сайт</h1>
+        </div>
+    </header>
+    <div class="MainDiv">
+        <div>
+            <form asp-action="Login" asp-antiforgery="true">
+                <div asp-validation-summary="ModelOnly"></div>
+
+                <input type="hidden" asp-for="ReturnUrl" />
+
+                <input asp-for="LoginProp" placeholder="Логин" />
+
+                <input asp-for="Password" placeholder="Пароль" />
+
+                <input type="submit" value="Войти" />
+            </form>
+        </div>
+    </div>
+</body>
+</html>
